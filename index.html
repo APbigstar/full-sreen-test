@@ -7,9 +7,21 @@
     <script>
       let newWebRTC;
     </script>
+    <style>
+      #sizeContainer {
+        width: 100vw !important;
+        height: 100vh !important;
+        position: relative;
+      }
+      #full-screen-btn {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+      }
+    </style>
   </head>
   <body>
-    <div id="sizeContainer" style="width: 100vw; height: 100vh;">
+    <div id="sizeContainer">
       <button id="full-screen-btn" onclick="toggleFullScreen()">
         Full Screen
       </button>
