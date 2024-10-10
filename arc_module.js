@@ -25,3 +25,17 @@ newWebRTC = new WebRTCClient({
   container: document.getElementById("videoContainer"),
   audioRef: document.getElementById("audioRef"),
 });
+
+function showLoader() {
+    const loaderOverlay = document.querySelector(".loader-overlay");
+    if (loaderOverlay) {
+      loaderOverlay.style.display = "flex";
+    }
+  }
+  
+  function hideLoader() {
+    const loaderOverlay = document.querySelector(".loader-overlay");
+    if (loaderOverlay) {
+      loaderOverlay.style.display = "none";
+    }
+  }
