@@ -2,7 +2,7 @@ import { WebRTCClient } from "https://unpkg.com/@arcware/webrtc-plugin@latest/in
 
 newWebRTC = new WebRTCClient({
   address: "wss://signalling-client.ragnarok.arcware.cloud/",
-  shareId: "share-79f09605-3edc-4fa8-b5b9-49a7a3a5f25b",
+  shareId: "share-5b34bbc5-6211-45cd-b0d8-f7b0c32a7a9d",
   settings: {},
   playOverlay: false,
 
