@@ -29,7 +29,7 @@
     <button id="full-screen-btn" onclick="toggleFullScreen()">
       Full Screen
     </button>
-    <button id="auto-camera-btn" onclick='() => handleSendCommands({ autocamera: "Yes" });'>
+    <button id="auto-camera-btn" onclick='setAutoCamera()'>
       Auto Camera
     </button>
     <div class="loader-overlay">
@@ -69,6 +69,10 @@
         console.error("Error sending command:", error);
         return false; // Indicate that the command failed to send
       }
+    }
+
+    function setAutoCamera() {
+      handleSendCommands({ autocamera: "Yes" });
     }
   </script>
 </body>
