@@ -1,9 +1,9 @@
-import ChatbotView from "@/sections/chatbot";
+import FirstView from "@/sections/first";
 
 export const metadata = {
-    title: "Chatbot Page",
+    title: "First Page",
 }
 
 export default function Page() {
-    return <ChatbotView />
+    return <FirstView />
 }

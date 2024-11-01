@@ -1,13 +1,15 @@
 "use client";
 
 import { ArcwareInit } from "@arcware-cloud/pixelstreaming-websdk";
-
+import { useRouter } from "next/navigation";
 import React, { useState, useRef, useEffect } from "react";
 
 export default function ChatbotView() {
     const videoContainerRef = useRef(null);
     const [arcwareApplication, setArcwareApplication] = useState(null);
     const [applicationResponse, setApplicationResponse] = useState("");
+
+    const router = useRouter();
 
     const handleSendCommand = (descriptor) => {
         arcwareApplication?.emitUIInteraction(descriptor);
@@ -16,7 +18,7 @@ export default function ChatbotView() {
     useEffect(() => {
         const { Config, PixelStreaming, Application } = ArcwareInit(
             {
-                shareId: "share-5b34bbc5-6211-45cd-b0d8-f7b0c32a7a9d"
+                shareId: "share-79f09605-3edc-4fa8-b5b9-49a7a3a5f25b"
             },
             {
                 initialSettings: {
@@ -61,6 +63,12 @@ export default function ChatbotView() {
                 ref={videoContainerRef}
                 style={{ width: "100vw", height: "100vh" }}
             />
+            <button
+                className="bg-blue-500 text-white p-2 rounded-md"
+                onClick={() => router.push("/")}
+            >
+                Back
+            </button>
             <button
                 style={{
                     position: "absolute",
